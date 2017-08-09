@@ -9,20 +9,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/articleName',function(req,res){
-    res.send(createTemplate(articleName));
+app.get('/:articleName',function(req,res){
+    res.send(createTemplate(articles[articleName]));
     
 });
 
-app.get('/article-two.html',function(req,res){
-    res.send("Article two will be served here");
-    
-});
-
-app.get('/article-three',function(req,res){
-    res.send("Article three will be served here");
-    
-});
 var articles = 
 {
   articleone:` title: 'Article One | Swetha G',
@@ -30,12 +21,12 @@ var articles =
   date: 'Sept 5,2017',
   author:'author 1'`,
 `
-  articletwo:` title: 'Article One | Swetha G',
+  articletwo:` title: 'Article Two | Swetha G',
   heading: 'Article One',
   date: 'Sept 10,2017',
   author:'author 2'`,
 `
-  articlethree:` title: 'Article One | Swetha G',
+  articlethree:` title: 'Article Three | Swetha G',
   heading: 'Article One',
   date: 'Sept 15,2017',
   author:'author 3'
