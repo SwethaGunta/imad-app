@@ -47,7 +47,7 @@ var htmlTemplate = `
               
               <title>
                   
-              ${title};
+              ${title}
     
               </title>
               
@@ -56,14 +56,14 @@ var htmlTemplate = `
           </head>
     <body>
             <h3>
-            ${heading};
+            ${heading}
             </h3>
          <p>
-            ${date};
+            ${date}
         </p>
                 
         <p>
-            ${author};
+            ${author}
         </p>
         
     </body>
