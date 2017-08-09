@@ -25,6 +25,53 @@ app.get('/article-three',function(req,res){
 });
 
 
+var articleone = 
+{
+  title: 'Article One | Swetha G',
+  heading: 'Article One',
+  date: 'Sept 5,2017',
+  author:'author 1'
+};
+
+
+
+function createTemplate(data)
+{
+    title = data.title;
+    heading = data.heading;
+    date = data.date;
+    author = data.author;
+var htmlTemplate = `
+ <html>
+          <head>
+              
+              <title>
+                  
+              ${title};
+    
+              </title>
+              
+              <meta name="viewport" content ="width=device-width, initial-scale =1" />
+             
+          </head>
+    <body>
+            <h3>
+            ${heading};
+            </h3>
+         <p>
+            ${date};
+        </p>
+                
+        <p>
+            ${author};
+        </p>
+        
+    </body>
+    
+    
+</html>`
+};
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
