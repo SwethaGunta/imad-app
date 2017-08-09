@@ -41,35 +41,29 @@ var    title = data.title;
    var heading = data.heading;
    var date = data.date;
 var    author = data.author;
-var htmlTemplate = `
- <html>
-          <head>
-              
-              <title>
-                  
-              ${title}
-    
-              </title>
-              
-              <meta name="viewport" content ="width=device-width, initial-scale =1" />
-             
-          </head>
-    <body>
-            <h3>
-            ${heading}
-            </h3>
-         <p>
-            ${date}
-        </p>
-                
-        <p>
-            ${author}
-        </p>
-        
-    </body>
-    
-    
-</html>`;
+var htmlTemplate =  {<html>
+            <head>
+                          <title>
+                              
+                          ${title}
+                     </title>
+                  <meta name="viewport" content ="width=device-width, initial-scale =1" />
+             </head>
+        <body>
+                <h3>
+                ${heading}
+                </h3>
+             <p>
+                ${date}
+            </p>
+                    
+            <p>
+                ${author}
+            </p>
+            
+        </body>
+</html>};
+
 return htmlTemplate;
 }
 
