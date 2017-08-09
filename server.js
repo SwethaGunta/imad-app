@@ -21,12 +21,10 @@ var articles =
   heading: 'Article One',
   date: 'Sept 5,2017',
   author:'author 1'`,
-`
-  articletwo:` title: 'Article Two | Swetha G',
+  articletwo:`title: 'Article Two | Swetha G',
   heading: 'Article One',
   date: 'Sept 10,2017',
   author:'author 2'`,
-`
   articlethree:` title: 'Article Three | Swetha G',
   heading: 'Article One',
   date: 'Sept 15,2017',
