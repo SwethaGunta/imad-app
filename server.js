@@ -9,8 +9,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one.html',function(req,res){
-    res.send(createTemplate(articleone));
+app.get('/articleName',function(req,res){
+    res.send(createTemplate(articleName));
     
 });
 
@@ -23,15 +23,25 @@ app.get('/article-three',function(req,res){
     res.send("Article three will be served here");
     
 });
-
-
-var articleone = 
+var articles = 
 {
-  title: 'Article One | Swetha G',
+  articleone:` title: 'Article One | Swetha G',
   heading: 'Article One',
   date: 'Sept 5,2017',
-  author:'author 1'
+  author:'author 1'`,
+`
+  articletwo:` title: 'Article One | Swetha G',
+  heading: 'Article One',
+  date: 'Sept 10,2017',
+  author:'author 2'`,
+`
+  articlethree:` title: 'Article One | Swetha G',
+  heading: 'Article One',
+  date: 'Sept 15,2017',
+  author:'author 3'
 };
+
+
 
 
 
