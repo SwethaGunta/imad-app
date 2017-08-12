@@ -20,3 +20,23 @@ button.onclick = function(){
     request.send(null);
    
 };
+var submit_name = document.getElementById('submit-name');
+submit_name.onclick = function(){
+    var request = new XMLHttpRequest();
+    var names = [];
+    request.onreadystatechange = function(){
+        if(request.status === XMLHttpRequest.DONE){
+            if(request.status === 200){
+                var name = request.responseText;
+                names.push(JSON.parse(name));
+                //
+            }
+        }
+    
+    }
+    var name = document.getElementById('myname').value;
+    request.open('GET',"http://svgunta.imad.hasura-app.io/submit-name?" + name, true);
+    request.send(null);
+    
+}
+
