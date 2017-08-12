@@ -29,7 +29,7 @@ submit_name.onclick = function(){
             if(request.status === 200){
                // var name = request.responseText;
                 //names.push(JSON.parse(name));
-                names = ['name1','name2','name3'];
+                names = request.responseText;
                 var list = '';
                 for(var i=0;i<names.length();i++)
                 {
