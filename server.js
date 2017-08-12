@@ -42,6 +42,7 @@ var articles =
 var names=[];
 app.get('/submit-name',function(req,res){
     var name = req.query.name;
+    console.log(name);
     names.push(name);
     res.send(JSON.stringify(names));
 });
