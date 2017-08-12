@@ -23,13 +23,13 @@ button.onclick = function(){
 var submit_name = document.getElementById('submit-name');
 submit_name.onclick = function(){
       
-     var request = new XMLHttpRequest();
-    request.onreadystatechange = function(){
-        if(request.status === XMLHttpRequest.DONE){
-            if(request.status === 200){
+     var request_one = new XMLHttpRequest();
+    request_one.onreadystatechange = function(){
+        if(request_one.status === XMLHttpRequest.DONE){
+            if(request_one.status === 200){
                 var names = [];
                 var list = '';
-                names = (JSON.parse(request.responseText));
+                names = (JSON.parse(request_one.responseText));
                
                 for(var i=0;i<names.length;i++)
                 {
@@ -42,8 +42,8 @@ submit_name.onclick = function(){
     
     }
     var name = (document.getElementById('myname')).value;
-    request.open('GET',"http://svgunta.imad.hasura-app.io/submit-name?name=" + name, true);
-    request.send(null);
+    request_one.open('GET',"http://svgunta.imad.hasura-app.io/submit-name?name=" + name, true);
+    request_one.send(null);
     
 }
 
