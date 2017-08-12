@@ -28,8 +28,11 @@ var articles =
   articleone:{title: 'Article One | Swetha G',
   heading: 'Article One',
   date: 'Sept 5,2017',
-  author:'author 1'}
-};
+  author:'author 1'},
+  articletwo:{title: 'Article Two | Swetha G',
+  heading: 'Article Two',
+  date: 'Sept 10,2017',
+  author:'author 2'}};
 
 
 
