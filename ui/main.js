@@ -30,7 +30,6 @@ submit_name.onclick = function(){
             if(request.status === 200){
                // var name = request.responseText;
                 //names.push(JSON.parse(name));
-                 var names = [];
                 names = request.responseText;
                 names = JSON.parse(names);
                 var list = '';
