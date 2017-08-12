@@ -54,10 +54,11 @@ app.get('/:articleName',function(req,res){
 
 function createTemplate(data)
 {
-var    title = data.title;
-   var heading = data.heading;
-   var date = data.date;
-var    author = data.author;
+    console.log(data);
+var title = data.title;
+var heading = data.heading;
+var date = data.date;
+var author = data.author;
 var htmlTemplate =  
 `<html>
     <head>
