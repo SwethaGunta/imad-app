@@ -21,6 +21,40 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+
+app.get('/:articleName',function(req,res){
+    console.log(req.params.articleName);
+    var articleName = req.params.articleName;
+    console.log(articleName);
+    res.send(createTemplate(articles[articleName]));
+});
+
+var articles = 
+{
+  articleone:` title: 'Article One | Swetha G',
+  heading: 'Article One',
+  date: 'Sept 5,2017',
+  author:'author 1'`,
+  articletwo:`title: 'Article Two | Swetha G',
+  heading: 'Article One',
+  date: 'Sept 10,2017',
+  author:'author 2'`,
+  articlethree:` title: 'Article Three | Swetha G',
+  heading: 'Article One',
+  date: 'Sept 15,2017',
+  author:'author 3'
+};
+
+
+
+
+
+
+
+
+
+
+
 function createTemplate(data)
 {
 var    title = data.title;
