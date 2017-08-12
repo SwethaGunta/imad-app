@@ -24,9 +24,15 @@ app.get('/ui/madi.png', function (req, res) {
  var counter =0; 
  
 app.get('/counter', function (req, res) {
-  res.send(++counter);
+  res.send(displaycounter(counter));
 });
 
+function displaycounter(counter)
+{
+    var count = counter;
+    count = count + 1;
+    return count;
+}
 
 var articles = 
 {
