@@ -35,7 +35,7 @@ submit_name.onclick = function(){
     
     }
     var name = document.getElementById('myname').value;
-    request.open('GET',"http://svgunta.imad.hasura-app.io/submit-name?" + name, true);
+    request.open('GET',"http://svgunta.imad.hasura-app.io/submit-name?name=" + name, true);
     request.send(null);
     
 }
