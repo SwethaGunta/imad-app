@@ -28,7 +28,7 @@ app.get('/counter', function (req, res) {
 });
 
 app.get('/submit-name',function(req,res){
-    var name = req.query.myname;
+    var name = req.query.name;
     res.send(JSON.stringify(names));
 });
 
