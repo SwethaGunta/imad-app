@@ -24,7 +24,12 @@ app.get('/ui/madi.png', function (req, res) {
 
 
 
-
+app.get('/:articleName',function(req,res){
+    console.log(req.params.articleName);
+    var articleName = req.params.articleName;
+    console.log(articleName);
+    res.send(createTemplate(articles[articleName]));
+});
 
 
 
