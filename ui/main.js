@@ -22,17 +22,15 @@ button.onclick = function(){
 };
 var submit_name = document.getElementById('submit-name');
 submit_name.onclick = function(){
-   
-   var names = [];
+      
      var request = new XMLHttpRequest();
     request.onreadystatechange = function(){
         if(request.status === XMLHttpRequest.DONE){
             if(request.status === 200){
-               // var name = request.responseText;
-                //names.push(JSON.parse(name));
+                var names = [];
                 var list = '';
-                names = request.responseText;
-                names = (JSON.parse(names));
+                names = (JSON.parse(request.responseText));
+               
                 for(var i=0;i<names.length;i++)
                 {
                     list += '<li>' + names[i]  + '</li>';
