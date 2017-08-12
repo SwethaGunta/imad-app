@@ -23,6 +23,13 @@ app.get('/ui/madi.png', function (req, res) {
 
 
 
+var articles = 
+{
+  articleone:{title: 'Article One | Swetha G',
+  heading: 'Article One',
+  date: 'Sept 5,2017',
+  author:'author 1'}
+};
 
 
 
