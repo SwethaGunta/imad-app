@@ -1,8 +1,8 @@
 console.log('Loaded!');
-var span = 0;
+var count = 0;
 var button = document.getElementbyId('counter');
 button.onclick = function(){
-   span = span + 1;
-   var ele2 = document.getElementbyId('span');
-   ele2.innerHtml = span.toString();
+   count = count + 1;
+   var span = document.getElementbyId('span');
+   span.innerHtml = count.toString();
 }
