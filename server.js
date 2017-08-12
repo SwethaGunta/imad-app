@@ -21,6 +21,40 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+function createTemplate(data)
+{
+var    title = data.title;
+   var heading = data.heading;
+   var date = data.date;
+var    author = data.author;
+var htmlTemplate =  
+`<html>
+    <head>
+         <title>
+                              
+         ${title}
+        </title>
+                  <meta name="viewport" content ="width=device-width, initial-scale =1" />
+        </head>
+        <body>
+        <h3>
+        ${heading}
+                </h3>
+             <p>
+                ${date}
+            </p>
+                    
+            <p>
+                ${author}
+            </p>
+            
+        </body>
+</html>`
+
+return htmlTemplate;
+}
+
+
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
