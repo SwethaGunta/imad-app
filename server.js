@@ -24,7 +24,7 @@ app.get('/ui/madi.png', function (req, res) {
  var count = 0; 
  
 app.get('/counter', function (req, res) {
-  res.send(++count);
+  res.send((++count).toString());
 });
 
 
