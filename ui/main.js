@@ -49,7 +49,7 @@ submit_name.onclick = function(){
     var name = (document.getElementById('myname')).value;
     console.log(name);
     request.open('GET',"http://svgunta.imad.hasura-app.io/submit",true);
-   request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-request.send(name);
+//   request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+request.send(null);
   };
 
