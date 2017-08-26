@@ -5,15 +5,18 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var names[];
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-  var name = req.query.name;
+  
+});
 
+var names;
+app.get('/submit',function(req,res)
+{
+var name = req.query.name;
 console.log(name);
-    
 names.push(name);
-    
 res.send(JSON.stringify(names));
 });
 
