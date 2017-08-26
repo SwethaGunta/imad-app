@@ -16,7 +16,7 @@ app.get('/submit',function(req,res)
 {
 var name = req.body;
 names.push(name);
-res.send(JSON.stringify(names));
+res.send(names.toString());
 });
 
 app.get('/ui/main.js', function (req, res) {
