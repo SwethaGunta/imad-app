@@ -20,7 +20,7 @@ button.onclick = function(){
     request.send(null);
    
 };
-var submit_name = document.getElementById('submit-name');
+var submit_name = document.getElementById('submitname');
 submit_name.onclick = function(){
       
      var request_one = new XMLHttpRequest();
@@ -28,8 +28,7 @@ submit_name.onclick = function(){
         if(request_one.status === XMLHttpRequest.DONE){
             if(request_one.status === 200){
                 var names = [];
-                
-                var list = '';
+                var list = ' ';
                 names = (JSON.parse(request_one.responseText));
                
                 for(var i=0;i<names.length;i++)
@@ -44,7 +43,7 @@ submit_name.onclick = function(){
         }
     }
     var name = (document.getElementById('myname')).value;
-    request_one.open('GET',"http://svgunta.imad.hasura-app.io/submit-name?name=" + name, true);
+    request_one.open('GET',"http://svgunta.imad.hasura-app.io", true);
     request_one.send(null);
 }
 
