@@ -9,10 +9,6 @@ var names=[];
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-   var name = req.query.name;
-    console.log(name);
-    names.push(name);
-    res.send(JSON.stringify(names));
 });
 
 app.get('/ui/main.js', function (req, res) {
