@@ -20,7 +20,9 @@ button.onclick = function(){
     request.send(null);
    
 };
+
 var submit_name = document.getElementById('submitname');
+
 submit_name.onclick = function(){
      var request = new XMLHttpRequest();
     request.onreadystatechange = function(){
@@ -28,6 +30,9 @@ submit_name.onclick = function(){
             if(request.status === 200){
                 var names = [];
                 var list = ' ';
+                console.log('hi!');
+                console.log(JSON.parse(request.responseText));
+                console.log('hello!')
                 names = (JSON.parse(request.responseText));
                console.log(names);
                 for(var i=0;i<names.length;i++)
