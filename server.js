@@ -5,8 +5,14 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var names=[];
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+   var name = req.query.name;
+    console.log(name);
+    names.push(name);
+    res.send(JSON.stringify(names));
 });
 
 app.get('/ui/main.js', function (req, res) {
@@ -38,14 +44,6 @@ var articles =
   heading: 'Article Two',
   date: 'Sept 10,2017',
   author:'author 2'}};
-
-var names=[];
-app.get('/submit-name',function(req,res){
-    var name = req.query.name;
-    console.log(name);
-    names.push(name);
-    res.send(JSON.stringify(names));
-});
 
 
 
