@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
 var names = [];
 app.get('/submit',function(req,res)
 {
-var name = req.body.name;
+var name = req.body;
 names.push(name);
 res.send(JSON.stringify(names));
 });
