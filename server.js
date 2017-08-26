@@ -13,8 +13,8 @@ app.get('/', function (req, res) {
 
 var names;
 app.get('/submit',function(req,res)
-{
-var name = req.body;
+{console.log(req.body);
+var name = req.body.name;
 names.push(name);
 res.send(JSON.stringify(names));
 });
