@@ -15,7 +15,7 @@ var names = [];
 app.get('/submit',function(req,res)
 {
 names = ["swetha","cherry"];
-res.send(JSON.stringify(names));
+res.send(names.toString());
 });
 
 app.get('/ui/main.js', function (req, res) {
