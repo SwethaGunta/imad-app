@@ -43,7 +43,7 @@ submit_name.onclick = function(){
         }
     }
     var name = (document.getElementById('myname')).value;
-    request_one.open('GET',"http://svgunta.imad.hasura-app.io", true);
+    request_one.open('GET',"http://svgunta.imad.hasura-app.io/submit",true);
     request_one.send(null);
 }
 
