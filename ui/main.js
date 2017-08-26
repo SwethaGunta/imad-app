@@ -37,11 +37,12 @@ submit_name.onclick = function(){
                     list += '<li>' + names[i]  + '</li>';
                 }
                 var ul = document.getElementById('list');
-                ul.innerHTML = list;
+                ul.innerHTML = list.toString();
             }
         }
     }
     var name = (document.getElementById('myname')).value;
     request.open('GET',"http://svgunta.imad.hasura-app.io/submit",true);
+    request.send();
   };
 
