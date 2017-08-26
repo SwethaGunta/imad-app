@@ -11,11 +11,11 @@ app.get('/', function (req, res) {
   
 });
 
-var names;
+var names = [];
 app.get('/submit',function(req,res)
 {
-var name = req.body;
-names.add(name);
+var name = req.body.name;
+names.push(name);
 res.send(JSON.stringify(names));
 });
 
