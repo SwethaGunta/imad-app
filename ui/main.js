@@ -22,7 +22,6 @@ button.onclick = function(){
 };
 var submit_name = document.getElementById('submitname');
 submit_name.onclick = function(){
-      
      var request_one = new XMLHttpRequest();
     request_one.onreadystatechange = function(){
         if(request_one.status === XMLHttpRequest.DONE){
