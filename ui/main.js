@@ -28,7 +28,7 @@ submit_name.onclick = function(){
             if(request.status === 200){
                 var names = [];
                 var list = ' ';
-                names = (JSON.parse(request_one.responseText));
+                names = (JSON.parse(request.responseText));
                
                 for(var i=0;i<names.length;i++)
                 {
