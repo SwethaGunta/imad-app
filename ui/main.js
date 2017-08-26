@@ -27,7 +27,7 @@ submit_name.onclick = function(){
      var request = new XMLHttpRequest();
     request.onreadystatechange = function(){
         if(request.status === XMLHttpRequest.DONE){
-            if(request.status === 200 || request.status === 304 ){
+            if(request.status === 200 ){
                 var names = [];
                 var list = ' ';
                 console.log('hi!');
