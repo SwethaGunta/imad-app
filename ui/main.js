@@ -31,7 +31,7 @@ submit_name.onclick = function(){
                 var names = [];
                 var list = ' ';
                 console.log('hi!');
-                console.log(JSON.parse(request.responseText));
+                console.log(names.toString());
                 console.log('hello!')
                 names = (JSON.parse(request.responseText));
                console.log(names);
