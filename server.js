@@ -5,10 +5,15 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var names=[];
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+  var name = req.query.name;
+
+console.log(name);
+    
+names.push(name);
+    
+res.send(JSON.stringify(names));
 });
 
 app.get('/ui/main.js', function (req, res) {
@@ -42,9 +47,6 @@ var articles =
   author:'author 2'}};
 
 
-
-
-
 app.get('/:articleName',function(req,res){
     console.log(req.params.articleName);
     var articleName = req.params.articleName;
@@ -53,17 +55,9 @@ app.get('/:articleName',function(req,res){
 });
 
 
-
-
-
-
-
-
-
-
 function createTemplate(data)
 {
-    console.log(data);
+console.log(data);
 var title = data.title;
 var heading = data.heading;
 var date = data.date;
@@ -72,7 +66,6 @@ var htmlTemplate =
 `<html>
     <head>
          <title>
-                              
          ${title}
         </title>
                   <meta name="viewport" content ="width=device-width, initial-scale =1" />
