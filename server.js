@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
 var names = [];
 app.get('/submit',function(req,res)
 {
-var name = req.body;
+var name = req.params.name;
 names.push(name);
 res.send(names.toString());
 });
